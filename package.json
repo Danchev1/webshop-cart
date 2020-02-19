@@ -1,0 +1,33 @@
+{
+  "name": "webshop-cart",
+  "version": "1.0.0",
+  "description": "Server-side webshop build with node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danchev1/webshop-cart.git"
+  },
+  "author": "yordangdanchev@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danchev1/webshop-cart/issues"
+  },
+  "homepage": "https://github.com/Danchev1/webshop-cart#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
+  }
+}
