@@ -1,8 +1,11 @@
 const path = require('path');
-const NotFound = require('express').Router();
+const { rootDir } = require('../../utils/index');
+const express = require('express');
 
-NotFound.get('*', (req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, '../../', 'views', '404.html'));
+const NotFoundRouter = express.Router();
+
+NotFoundRouter.get('*', (req, res, next) => {
+  res.sendFile(path.join(rootDir(), 'views', '404.html'));
 });
 
-module.exports = NotFound;
+module.exports = NotFoundRouter;

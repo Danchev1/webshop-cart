@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 
-const { rootDir } = require('../../helpers/index');
+const { rootDir } = require('../../utils/index');
 
 const AdminRouter = express.Router();
 
