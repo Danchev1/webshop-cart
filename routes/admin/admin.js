@@ -1,7 +1,9 @@
 const path = require('path');
-const AdminRouter = require('express').Router();
+const express = require('express');
 
 const { rootDir } = require('../../helpers/index');
+
+const AdminRouter = express.Router();
 
 AdminRouter.get('/add-product', (req, res, next) => {
   res.sendFile(path.join(rootDir(), 'views', 'add-products.html'));
