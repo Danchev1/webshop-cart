@@ -1,13 +1,22 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const paths = require('./paths');
 
 module.exports = {
   mode: 'production',
-  entry: './static/js/main.js',
+  entry: [paths.static + '/js/main.js'],
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: paths.build,
     filename: 'main.js'
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'main.css'
+    })
+  ],
   module: {
     rules: [
       {
@@ -23,15 +32,15 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader
           },
-          'css-loader', // translates CSS into CommonJS
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+            options: {
+              importLoaders: 1
+            }
+          },
           'sass-loader' // compiles Sass to CSS, using Node Sass by default
         ]
       }
     ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css'
-    })
-  ]
+  }
 };
