@@ -4,9 +4,12 @@ const router = express.Router();
 
 router.get('/add-product', (req, res, next) => {
   res.render('add-products', {
-    meta: {
-      title: 'Add products - Sneaker Hype',
-      description: 'Add products to store'
+    page: {
+      pageUrl: req.originalUrl,
+      meta: {
+        title: 'Add products - Sneaker Hype',
+        description: 'Add products to store'
+      }
     }
   });
 });
