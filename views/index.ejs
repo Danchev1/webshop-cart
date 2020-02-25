@@ -2,25 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<%= page.meta.description %>" />
     <title><%= page.meta.title %></title>
     <link rel="stylesheet" href="/1.main.css">
 </head>
 <body>
-<header>
-    Header
-    <nav>
-        <ul>
-            <li><a href="/" title="Home page">Home</a></li>
-            <li>
-                <a href="/admin/add-product" title="Add products page"
-                >Add products</a
-                >
-            </li>
-        </ul>
-    </nav>
-</header>
-<main>
+<%- include('./includes/header'); %>
+<main role="main">
     <section>
         section 1
     </section>
@@ -28,6 +17,6 @@
         section 2
     </section>
 </main>
-<footer>Footer</footer>
+<%- include('./includes/footer'); %>
 </body>
 </html>
