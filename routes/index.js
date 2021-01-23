@@ -1,5 +1,5 @@
-module.exports = app => {
-  app.use('/admin', require('./admin/admin'));
-  app.use('/', require('./webshop/webshop'));
-  app.use('*', require('./404/404'));
+module.exports = (app) => {
+    app.use('/admin', require('./admin/products'));
+    app.use('/', require('./home/home'));
+    app.use('*', require('./404/404'));
 };

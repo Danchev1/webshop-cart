@@ -1,7 +1,9 @@
 const express = require('express');
-const { get404Page } = require('../../controllers/404');
+
+const { getHomePage } = require('../../controllers/home');
 
 const router = express.Router();
-router.get('*', get404Page);
+
+router.get('/', getHomePage);
 
 module.exports = router;

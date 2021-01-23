@@ -64,13 +64,13 @@ $btn-box-shadow: none;
 @import '~bootstrap/scss/print';
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 button,
 .nav-link {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
