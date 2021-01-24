@@ -15,9 +15,11 @@
     <section>
         section 1
     </section>
+    <% if (products) { %>
     <section>
-        section 2
+        <%= JSON.stringify(products) %>
     </section>
+    <% } %>
 </main>
 <%- include('./includes/footer'); %>
 </body>
