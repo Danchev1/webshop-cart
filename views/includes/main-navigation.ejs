@@ -1,4 +1,7 @@
 <nav class="nav justify-content-center main-navigation">
-    <a class="nav-link <%= page.pageUrl === '/' ? 'active' : '' %>" href="/">Home</a>
+    <a class="nav-link <%= page.pageUrl === '/' ? 'active' : '' %>" href="/" title="Home page">Home</a>
+    <a class="nav-link <%= page.pageUrl === '/products' ? 'active' : '' %>" href="/products" title="All products">Products</a>
+    <a class="nav-link <%= page.pageUrl === '/cart' ? 'active' : '' %>" href="/cart">Cart</a>
+    <a class="nav-link <%= page.pageUrl === '/admin/products' ? 'active' : '' %>" href="/admin/products" title="All products">Products</a>
     <a class="nav-link <%= page.pageUrl === '/admin/add-products' ? 'active' : '' %>" href="/admin/add-products" title="Add products page">Add products</a>
 </nav>

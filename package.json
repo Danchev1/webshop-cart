@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "build::static": "webpack --config=config/webpack.config.js"
+    "build::static": "webpack --config=webpack/webpack.config.js"
   },
   "repository": {
     "type": "git",

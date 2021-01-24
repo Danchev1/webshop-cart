@@ -1,7 +1,7 @@
-const Product = require('../models/Product');
+const Product = require('../../models/Product');
 
 exports.getAddProductsPage = (req, res, next) => {
-    res.render('add-products', {
+    res.render('admin/add-products', {
         page: {
             pageUrl: req.originalUrl,
             meta: {
@@ -15,12 +15,12 @@ exports.getAddProductsPage = (req, res, next) => {
 exports.postAddProduct = (req, res, next) => {
     const product = new Product(req.body.title, req.body.description);
     product.save();
-    res.redirect('/');
+    res.redirect('/admin/products');
 };
 
 exports.getProducts = (req, res, next) => {
     const products = Product.fetchProducts((products) => {
-        res.render('home', {
+        res.render('admin/products', {
             page: {
                 pageUrl: req.originalUrl,
                 meta: {
